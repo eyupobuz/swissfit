@@ -1,0 +1,408 @@
+/* ══════════════════════════════════════════════════════
+   Swiss Fit Club — mobile.css
+   import './mobile.css' → main.tsx veya index.css'e ekleyin
+   Breakpoint: max-width 768px (tablet) ve 480px (telefon)
+══════════════════════════════════════════════════════ */
+
+/* ── Genel dokunmatik iyileştirmeler ─────────────────── */
+@media (max-width: 768px) {
+
+  html {
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Minimum dokunmatik hedef boyutu */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Input zoom engellemek için font büyüklüğü */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* ── Layout ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* 4'lü grid → 2'li */
+  .grid-cols-4-to-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* 3'lü grid → 1'li */
+  .grid-cols-3-to-1 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 2'li grid → 1'li */
+  .grid-cols-2-to-1 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Flex satırını kolona çevir */
+  .flex-row-to-col {
+    flex-direction: column !important;
+  }
+
+  /* Yatay scroll yerine sarılsın */
+  .overflow-x-scroll-mobile {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .overflow-x-scroll-mobile::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Header ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* Desktop nav gizle */
+  .sfc-desktop-nav {
+    display: none !important;
+  }
+
+  /* Hamburger göster */
+  .sfc-mobile-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Logo küçült */
+  .sfc-logo {
+    font-size: 20px !important;
+  }
+
+  /* Header yüksekliği */
+  header {
+    height: 52px !important;
+  }
+}
+
+/* ── Hero / Banner bölümleri ─────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Hero başlık */
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 4rem) !important;
+    line-height: 0.95 !important;
+  }
+
+  /* Hero alt başlık */
+  .hero-subtitle {
+    font-size: clamp(0.7rem, 3vw, 0.9rem) !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  /* Hero açıklama */
+  .hero-desc {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Hero padding */
+  .hero-section {
+    min-height: 80vh !important;
+    padding: 80px 16px 48px !important;
+  }
+
+  /* Hero buton tam genişlik */
+  .hero-cta {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ── Stat Kartları ────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* 4'lü → 2'li */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .stat-card {
+    padding: 14px 16px !important;
+  }
+
+  /* Büyük rakamları küçült */
+  .stat-number {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 360px) {
+
+  /* Çok küçük ekranlar → 1'li */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Blog / İçerik Kartları ──────────────────────────── */
+@media (max-width: 768px) {
+
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .blog-card {
+    padding: 16px !important;
+  }
+
+  /* Post satır aksiyonları */
+  .post-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .post-row-actions {
+    width: 100%;
+    display: flex !important;
+    gap: 8px !important;
+  }
+
+  .post-row-actions button {
+    flex: 1 !important;
+  }
+}
+
+/* ── Form ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* 2'li form grid → 1'li */
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Span-2 iptal et */
+  .form-grid > [style*="grid-column"] {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Form aksiyon butonları */
+  .form-actions {
+    flex-direction: column !important;
+  }
+
+  .form-actions button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Form padding */
+  .form-card {
+    padding: 16px !important;
+  }
+}
+
+/* ── Admin Panel özel ─────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Toolbar */
+  .admin-toolbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .admin-toolbar button {
+    width: 100% !important;
+  }
+
+  /* Search + filter satırı */
+  .search-filter-row {
+    flex-direction: column !important;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+
+  .filter-group button {
+    flex: 1 !important;
+    text-align: center !important;
+  }
+
+  /* Login sayfası — sol panel gizle */
+  .login-left-panel {
+    display: none !important;
+  }
+
+  .login-right-panel {
+    width: 100% !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Login kart */
+  .login-card {
+    max-width: 100% !important;
+  }
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* 4'lü grid → 1'li */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .footer-inner {
+    padding-top: 48px !important;
+  }
+
+  /* Sosyal butonlar */
+  .footer-social-row {
+    margin-top: 16px !important;
+  }
+
+  /* Alt bar */
+  .footer-bottom-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+
+  /* Footer brand yazısı */
+  .footer-brand {
+    font-size: 22px !important;
+  }
+}
+
+/* ── Animasyonlar — mobilde sadeleştir ───────────────── */
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+
+  .fu {
+    animation-duration: 0.35s !important;
+  }
+}
+
+/* Hareket azaltma tercihi */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Modal / Overlay ──────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .modal-box {
+    margin: 16px !important;
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+    border-radius: 8px !important;
+  }
+}
+
+/* ── Toast ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .toast {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    width: auto !important;
+  }
+}
+
+/* ── Scrollbar — mobilde gizle ───────────────────────── */
+@media (max-width: 768px) {
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+  }
+}
+
+/* ── Safe area (iPhone notch / Dynamic Island) ───────── */
+@supports (padding: max(0px)) {
+
+  header {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+
+  .mobile-drawer-nav {
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+
+  footer {
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* ── Küçük telefon (360px ve altı) ───────────────────── */
+@media (max-width: 360px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .sfc-logo {
+    font-size: 17px !important;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .stat-number {
+    font-size: 28px !important;
+  }
+}
+
+/* ── Landscape mod ────────────────────────────────────── */
+@media (max-width: 768px) and (orientation: landscape) {
+
+  .hero-section {
+    min-height: 100vw !important;
+    padding-top: 60px !important;
+  }
+
+  /* Keyboard açıkken viewport sorunu */
+  .login-right-panel {
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+  }
+}

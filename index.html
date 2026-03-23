@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Primary Meta ─────────────────────────────────── -->
+    <title>Swiss Fit Club | Beylikdüzü Premium Fitness & Spor Salonu</title>
+    <meta name="description" content="Swiss Fit Club - Beylikdüzü ve Beykent'in premium fitness merkezi. Modern ekipmanlar, profesyonel eğitmenler, grup dersleri. Beykent Paradise AVM." />
+    <meta name="keywords" content="Beylikdüzü spor salonu, Beykent fitness, Beykent spor salonu, Beylikdüzü fitness salonu, personal trainer Beylikdüzü, grup dersleri Beylikdüzü" />
+    <meta name="author" content="Swiss Fit Club" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://swissfitclub.com" />
+
+    <!-- ── Theme & PWA ────────────────────────────────────── -->
+    <meta name="theme-color" content="#0d0d0d" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- ── Open Graph ─────────────────────────────────────── -->
+    <meta property="og:title" content="Swiss Fit Club | Beylikdüzü Premium Fitness" />
+    <meta property="og:description" content="Beylikdüzü ve Beykent'in en prestijli spor kulübü. Modern ekipmanlar, profesyonel eğitmenler." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://swissfitclub.com" />
+    <meta property="og:image" content="https://swissfitclub.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Swiss Fit Club" />
+
+    <!-- ── Twitter Card ───────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Swiss Fit Club | Beylikdüzü Premium Fitness" />
+    <meta name="twitter:description" content="Beylikdüzü ve Beykent'in en prestijli spor kulübü." />
+    <meta name="twitter:image" content="https://swissfitclub.com/og-image.jpg" />
+
+    <!-- ── Preconnect (fonts load faster) ────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ── Google Fonts ───────────────────────────────────── -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+    />
+
+    <!-- ── Baseline styles (prevent flash) ───────────────── -->
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        background: #0d0d0d;
+        color: #f0f0f0;
+        font-family: 'Barlow', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Prevent layout shift while React loads */
+      #root { min-height: 100vh; }
+    </style>
+
+    <!-- ── Structured Data ────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Swiss Fit Club",
+      "description": "Beylikdüzü ve Beykent'in premium fitness merkezi. Modern ekipmanlar, profesyonel eğitmenler, grup dersleri.",
+      "url": "https://swissfitclub.com",
+      "logo": "https://swissfitclub.com/logo.png",
+      "image": "https://swissfitclub.com/og-image.jpg",
+      "telephone": "+902120000000",
+      "email": "info@swissfitclub.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beykent Paradise AVM",
+        "addressLocality": "Beylikdüzü",
+        "addressRegion": "İstanbul",
+        "postalCode": "34520",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.0082",
+        "longitude": "28.6540"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "06:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday","Sunday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        }
+      ],
+      "priceRange": "₺₺",
+      "sameAs": [
+        "https://www.instagram.com/swissfitclub",
+        "https://www.facebook.com/swissfitclub"
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

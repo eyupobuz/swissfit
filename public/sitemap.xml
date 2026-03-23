@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+
+  <!-- ── Ana Sayfa ──────────────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/og-image.jpg</image:loc>
+      <image:title>Swiss Fit Club — Beylikdüzü Premium Fitness</image:title>
+      <image:caption>Beylikdüzü ve Beykent'in premium fitness merkezi</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Kulüplerimiz ───────────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/kuluplerimiz</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/kulupler.jpg</image:loc>
+      <image:title>Swiss Fit Club Kulüpleri — Beylikdüzü ve Beykent</image:title>
+      <image:caption>Beykent Paradise AVM ve çevre lokasyonlarımız</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Grup Derslerimiz ───────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/grup-dersleri</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/grup-dersleri.jpg</image:loc>
+      <image:title>Swiss Fit Club Grup Dersleri</image:title>
+      <image:caption>Profesyonel eğitmenler eşliğinde grup fitness dersleri</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Hizmetlerimiz ──────────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/hizmetlerimiz</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/hizmetler.jpg</image:loc>
+      <image:title>Swiss Fit Club Hizmetleri</image:title>
+      <image:caption>Personal training, beslenme danışmanlığı ve daha fazlası</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Blog ──────────────────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/blog</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── Blog: Beylikdüzü Spor Salonu ──────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/blog/beylikduzu-spor-salonu</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/blog/beylikduzu-spor-salonu.jpg</image:loc>
+      <image:title>Beylikdüzü Spor Salonu Seçerken Nelere Dikkat Edilmeli?</image:title>
+      <image:caption>Beylikdüzü spor salonu rehberi</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Blog: Beykent Spor Salonu ─────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/blog/beykent-spor-salonu</loc>
+    <lastmod>2024-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/blog/beykent-spor-salonu.jpg</image:loc>
+      <image:title>Beykent Spor Salonu Tavsiyesi</image:title>
+      <image:caption>Beykent bölgesindeki en iyi spor salonları</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Blog: Grup Dersleri Rehberi ───────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/blog/grup-dersleri</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/blog/grup-dersleri.jpg</image:loc>
+      <image:title>Grup Dersleri Rehberi</image:title>
+      <image:caption>Fitness grup derslerinde nelere dikkat edilmeli</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── Blog: Protein Tozu ────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/blog/protein-tozu-rehberi</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://swissfitclub.com/images/blog/protein-tozu.jpg</image:loc>
+      <image:title>Protein Tozu Kullanımı: Uzman Görüşleri</image:title>
+      <image:caption>Protein takviyesi rehberi</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ── İletişim ───────────────────────────────────────── -->
+  <url>
+    <loc>https://swissfitclub.com/iletisim</loc>
+    <lastmod>2024-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

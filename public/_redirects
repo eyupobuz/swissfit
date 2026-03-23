@@ -1,0 +1,37 @@
+
+
+# ── www → non-www (301) ─────────────────────────────────
+https://www.swissfitclub.com/*  https://swissfitclub.com/:splat  301!
+
+# ── HTTP → HTTPS (301) ─────────────────────────────────
+http://swissfitclub.com/*       https://swissfitclub.com/:splat  301!
+http://www.swissfitclub.com/*   https://swissfitclub.com/:splat  301!
+
+# ── Trailing slash kaldır (301) ────────────────────────
+/kuluplerimiz/    /kuluplerimiz    301
+/grup-dersleri/   /grup-dersleri   301
+/hizmetlerimiz/   /hizmetlerimiz   301
+/blog/            /blog            301
+/iletisim/        /iletisim        301
+
+# ── Eski / alternatif URL yönlendirmeleri (301) ─────────
+/spor-salonu           /kuluplerimiz    301
+/fitness               /kuluplerimiz    301
+/gym                   /kuluplerimiz    301
+/dersler               /grup-dersleri   301
+/group-classes         /grup-dersleri   301
+/hizmetler             /hizmetlerimiz   301
+/services              /hizmetlerimiz   301
+/contact               /iletisim        301
+/contact-us            /iletisim        301
+/iletisim-formu        /iletisim        301
+/uyelik                /iletisim        301
+/membership            /iletisim        301
+
+# ── Admin panel kısa yol ───────────────────────────────
+/panel                 /admin           301
+/yonetim               /admin           301
+/dashboard             /admin           301
+
+# ── SPA fallback (React Router) — en sona koyulmalı ───
+/*    /index.html    200
