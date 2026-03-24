@@ -91,7 +91,7 @@ const GroupClasses = () => {
       />
 
       {/* ─── Classes Grid ─── */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container">
           <SectionTitle
             subtitle="Derslerimiz"
@@ -110,7 +110,8 @@ const GroupClasses = () => {
                 key={c.name}
                 variants={fadeUp}
                 custom={i}
-                className="group bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+                className="group bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                style={{ boxShadow: "var(--shadow-card)" }}
               >
                 {/* Image header */}
                 <div className="h-40 overflow-hidden relative">
@@ -120,7 +121,7 @@ const GroupClasses = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <h3 className="absolute bottom-4 left-4 font-heading text-2xl font-bold uppercase tracking-wide">
+                  <h3 className="absolute bottom-4 left-4 font-heading text-2xl font-bold uppercase tracking-wide text-white">
                     {c.name}
                   </h3>
                 </div>
@@ -155,10 +156,9 @@ const GroupClasses = () => {
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${heroClasses})` }}
         />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/65" />
 
-        <div className="container relative z-10 text-center">
+        <div className="container relative z-10 text-center hero-text">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -166,10 +166,10 @@ const GroupClasses = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-2xl mx-auto"
           >
-            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight text-white">
               Ücretsiz Deneme Dersine Katılın
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-base md:text-lg">
+            <p className="text-white/80 max-w-xl mx-auto mb-10 text-base md:text-lg">
               Grup derslerimizi ücretsiz deneyin ve Swiss Fit Club farkını hissedin.
             </p>
             <Link to="/iletisim">

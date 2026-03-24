@@ -180,7 +180,7 @@ const BlogDetail = () => {
     return (
       <Layout>
         <div className="container py-40 text-center">
-          <h1 className="font-heading text-4xl font-bold mb-4">Yazı Bulunamadı</h1>
+          <h1 className="font-heading text-4xl font-bold mb-4 text-foreground">Yazı Bulunamadı</h1>
           <Link to="/blog"><Button variant="cta">Blog'a Dön</Button></Link>
         </div>
       </Layout>
@@ -193,13 +193,14 @@ const BlogDetail = () => {
 
   return (
     <Layout>
+      {/* ─── Blog Hero — fotoğraf üzeri, koyu overlay + beyaz yazı ─── */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container relative z-10 pb-12">
-          <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-medium">{post.category}</span>
-          <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase mt-3 max-w-3xl">{post.title}</h1>
-          <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="container relative z-10 pb-12 hero-text">
+          <span className="text-xs bg-primary/90 text-white px-2.5 py-1 rounded font-medium">{post.category}</span>
+          <h1 className="font-heading text-3xl md:text-5xl font-bold uppercase mt-3 max-w-3xl text-white">{post.title}</h1>
+          <div className="flex items-center gap-4 mt-4 text-sm text-white/70">
             <span className="flex items-center gap-1"><Calendar size={14} /> {post.date}</span>
             <span>·</span>
             <span>{post.readTime} okuma</span>
@@ -207,7 +208,8 @@ const BlogDetail = () => {
         </div>
       </section>
 
-      <article className="py-16 md:py-24">
+      {/* ─── Article Body ─── */}
+      <article className="py-16 md:py-24 bg-background">
         <div className="container max-w-3xl">
           {post.sections.map((section, i) => (
             <motion.div
@@ -218,7 +220,7 @@ const BlogDetail = () => {
               transition={{ delay: i * 0.05 }}
             >
               {section.heading && (
-                <h2 className="font-heading text-xl md:text-2xl font-bold mt-10 mb-4">{section.heading}</h2>
+                <h2 className="font-heading text-xl md:text-2xl font-bold mt-10 mb-4 text-foreground">{section.heading}</h2>
               )}
               <p className="text-muted-foreground leading-relaxed mb-6 text-base">{section.text}</p>
             </motion.div>
@@ -228,7 +230,7 @@ const BlogDetail = () => {
           <div className="flex flex-wrap items-center gap-2 mt-10 pt-8 border-t border-border">
             <Tag size={14} className="text-primary" />
             {post.tags.map((tag) => (
-              <span key={tag} className="text-xs bg-surface text-muted-foreground px-3 py-1 rounded-full">{tag}</span>
+              <span key={tag} className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">{tag}</span>
             ))}
           </div>
 
@@ -249,15 +251,15 @@ const BlogDetail = () => {
           {/* Related */}
           {post.relatedSlugs.length > 0 && (
             <div className="mt-16">
-              <h3 className="font-heading text-xl font-bold mb-6">İlgili Yazılar</h3>
+              <h3 className="font-heading text-xl font-bold mb-6 text-foreground">İlgili Yazılar</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {post.relatedSlugs.map((rs) => {
                   const related = blogData[rs];
                   if (!related) return null;
                   return (
-                    <Link key={rs} to={`/blog/${rs}`} className="bg-card border border-border rounded-lg p-4 hover:border-primary/30 transition-all group">
+                    <Link key={rs} to={`/blog/${rs}`} className="bg-card border border-border rounded-xl p-4 hover:border-primary/30 transition-all group" style={{ boxShadow: "var(--shadow-card)" }}>
                       <span className="text-xs text-primary font-medium">{related.category}</span>
-                      <h4 className="font-heading text-sm font-semibold mt-1 group-hover:text-primary transition-colors line-clamp-2">{related.title}</h4>
+                      <h4 className="font-heading text-sm font-semibold mt-1 text-foreground group-hover:text-primary transition-colors line-clamp-2">{related.title}</h4>
                     </Link>
                   );
                 })}
@@ -272,9 +274,9 @@ const BlogDetail = () => {
       </article>
 
       {/* CTA */}
-      <section className="py-16 bg-surface text-center">
+      <section className="py-16 bg-muted text-center">
         <div className="container">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold uppercase mb-4">Ücretsiz Deneme Dersi</h2>
+          <h2 className="font-heading text-2xl md:text-3xl font-bold uppercase mb-4 text-foreground">Ücretsiz Deneme Dersi</h2>
           <p className="text-muted-foreground max-w-lg mx-auto mb-6">Beylikdüzü'nün premium fitness deneyimi Swiss Fit Club'da ücretsiz deneme dersine katılın.</p>
           <Link to="/iletisim"><Button variant="cta">Hemen Başvur</Button></Link>
         </div>

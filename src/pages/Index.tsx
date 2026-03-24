@@ -141,7 +141,7 @@ const Index = () => {
       />
 
       {/* ─── Features ─── */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container">
           <SectionTitle
             subtitle="Neden Swiss Fit Club?"
@@ -160,7 +160,8 @@ const Index = () => {
                 key={f.title}
                 variants={fadeUp}
                 custom={i}
-                className="group relative bg-card border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+                className="group relative bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                style={{ boxShadow: "var(--shadow-card)" }}
               >
                 {/* Top accent line on hover */}
                 <span className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-primary/60 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
@@ -168,7 +169,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 mb-5">
                   <f.icon className="text-primary" size={24} />
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+                <h3 className="font-heading text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors duration-300">
                   {f.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
@@ -179,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* ─── About ─── */}
-      <section className="py-20 md:py-28 bg-surface">
+      <section className="py-20 md:py-28 bg-muted">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -192,10 +193,11 @@ const Index = () => {
               <img
                 src={heroClasses}
                 alt="Swiss Fit Club Beylikdüzü grup dersleri"
-                className="rounded-lg w-full h-[420px] object-cover"
+                className="rounded-xl w-full h-[420px] object-cover"
+                style={{ boxShadow: "var(--shadow-card)" }}
               />
               {/* Decorative offset frame */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/20 rounded-lg -z-10 hidden lg:block" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/20 rounded-xl -z-10 hidden lg:block" />
             </motion.div>
 
             <motion.div
@@ -204,10 +206,10 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <p className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-3 font-bold">
                 Kulübümüz Hakkında
               </p>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase mb-6 leading-tight">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase mb-6 leading-tight text-foreground">
                 Beykent'in Premium
                 <br />
                 Spor Kulübü
@@ -243,7 +245,7 @@ const Index = () => {
       </section>
 
       {/* ─── Services Overview ─── */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container">
           <SectionTitle
             subtitle="Hizmetlerimiz"
@@ -261,7 +263,8 @@ const Index = () => {
               <motion.div key={s.title} variants={fadeUp} custom={i}>
                 <Link
                   to={s.link}
-                  className="group relative block bg-card border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 h-full overflow-hidden"
+                  className="group relative block bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 h-full overflow-hidden"
+                  style={{ boxShadow: "var(--shadow-card)" }}
                 >
                   {/* Hover gradient backdrop */}
                   <span className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -270,7 +273,7 @@ const Index = () => {
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 mb-5">
                       <s.icon className="text-primary" size={24} />
                     </div>
-                    <h3 className="font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="font-heading text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                       {s.title}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
@@ -287,7 +290,7 @@ const Index = () => {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-20 md:py-28 bg-surface">
+      <section className="py-20 md:py-28 bg-muted">
         <div className="container max-w-3xl">
           <SectionTitle
             subtitle="Sıkça Sorulan Sorular"
@@ -304,16 +307,17 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.04, duration: 0.4 }}
-                  className={`bg-card border rounded-lg overflow-hidden transition-colors duration-300 ${
+                  className={`bg-card border rounded-xl overflow-hidden transition-colors duration-300 ${
                     isOpen ? "border-primary/30" : "border-border"
                   }`}
+                  style={{ boxShadow: "var(--shadow-card)" }}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-hover transition-colors duration-200"
+                    className="w-full flex items-center justify-between p-5 text-left transition-colors duration-200"
                     aria-expanded={isOpen}
                   >
-                    <h3 className="font-heading text-sm md:text-base font-semibold pr-4">
+                    <h3 className="font-heading text-sm md:text-base font-semibold pr-4 text-foreground">
                       {faq.q}
                     </h3>
                     <motion.span
@@ -353,10 +357,9 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${heroHome})` }}
         />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/65" />
 
-        <div className="container relative z-10 text-center">
+        <div className="container relative z-10 text-center hero-text">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -364,10 +367,10 @@ const Index = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-2xl mx-auto"
           >
-            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight text-white">
               Hayalinizdeki Forma Ulaşın
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-base md:text-lg">
+            <p className="text-white/80 max-w-xl mx-auto mb-10 text-base md:text-lg">
               Beylikdüzü'nün premium fitness merkezi Swiss Fit Club'da ücretsiz deneme dersimize
               katılın ve farkı yaşayın.
             </p>
@@ -385,9 +388,9 @@ const Index = () => {
       </section>
 
       {/* ─── Extended SEO Content ─── */}
-      <section className="py-16 bg-surface">
+      <section className="py-16 bg-muted">
         <div className="container max-w-4xl space-y-6">
-          <h2 className="font-heading text-2xl font-bold text-center uppercase mb-8">
+          <h2 className="font-heading text-2xl font-bold text-center uppercase mb-8 text-foreground">
             Beylikdüzü Spor Salonu & Beykent Fitness Merkezi
           </h2>
           <p className="text-muted-foreground text-sm leading-relaxed">

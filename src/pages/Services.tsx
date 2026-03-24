@@ -93,7 +93,7 @@ const Services = () => {
       />
 
       {/* ─── Services Grid ─── */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container">
           <SectionTitle
             subtitle="Hizmetler"
@@ -112,16 +112,17 @@ const Services = () => {
                 key={s.title}
                 variants={fadeUp}
                 custom={i}
-                className="group relative bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 text-center overflow-hidden"
+                className="group relative bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 text-center overflow-hidden"
+                style={{ boxShadow: "var(--shadow-card)" }}
               >
                 {/* Hover gradient backdrop */}
                 <span className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300">
                     <s.icon className="text-primary" size={24} />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors duration-300">
                     {s.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
@@ -138,8 +139,8 @@ const Services = () => {
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${heroHome})` }}
         />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
+        {/* Dark overlay — CTA fotoğraf üstünde olduğu için burada koyu kalması doğru */}
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="container relative z-10 text-center">
           <motion.div
@@ -149,10 +150,10 @@ const Services = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-2xl mx-auto"
           >
-            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight text-white">
               Hizmetlerimiz Hakkında Bilgi Alın
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-10 text-base md:text-lg">
+            <p className="text-white/70 max-w-xl mx-auto mb-10 text-base md:text-lg">
               Beylikdüzü'nde personal trainer desteği ve premium fitness deneyimi için bize ulaşın.
             </p>
             <Link to="/iletisim">

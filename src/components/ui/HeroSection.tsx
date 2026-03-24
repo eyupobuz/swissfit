@@ -33,18 +33,18 @@ const HeroSection = ({
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="max-w-3xl hero-text"
         >
           {subtitle && (
-            <p className="text-primary font-heading text-sm md:text-base tracking-[0.3em] uppercase mb-4">
+            <p className="text-primary font-heading text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-bold">
               {subtitle}
             </p>
           )}
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight mb-6">
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight mb-6 text-white">
             {title}
           </h1>
           {description && (
-            <p className="text-muted-foreground text-base md:text-lg max-w-xl mb-8 leading-relaxed">
+            <p className="text-white/85 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
               {description}
             </p>
           )}

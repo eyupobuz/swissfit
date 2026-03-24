@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../../assets/logo.png";
 
 /* ── Fonts (inject once) ──────────────────────────────── */
 if (typeof document !== "undefined" && !document.getElementById("sfc-fonts")) {
@@ -48,7 +49,7 @@ function NavLink({ to, label, active, onClick }: NavLinkProps) {
         fontWeight: 700,
         fontSize: 14,
         letterSpacing: "0.1em",
-        color: active ? RED : hov ? "#f0f0f0" : "#666",
+        color: active ? RED : hov ? "#1a1a2e" : "#6b7280",
         textDecoration: "none",
         transition: "color .2s",
         display: "inline-block",
@@ -94,16 +95,17 @@ function CtaBtn({ onClick, full = false }: CtaBtnProps) {
           background: hov ? "#c0211f" : RED,
           color: "#fff",
           border: "none",
-          borderRadius: 4,
+          borderRadius: 6,
           padding: full ? "13px 24px" : "9px 22px",
           fontFamily: ffC,
           fontWeight: 800,
           fontSize: 13,
           letterSpacing: "0.12em",
           cursor: "pointer",
-          transition: "background .2s",
+          transition: "all .2s",
           width: full ? "100%" : "auto",
           marginTop: full ? 8 : 0,
+          boxShadow: "0 2px 8px rgba(232,39,39,0.2)",
         }}
         onMouseEnter={() => setHov(true)}
         onMouseLeave={() => setHov(false)}
@@ -139,10 +141,11 @@ const Header = () => {
         right: 0,
         zIndex: 50,
         fontFamily: ff,
-        background: scrolled ? "#0d0d0df2" : "#0d0d0d",
+        background: scrolled ? "rgba(255,255,255,0.95)" : "#ffffff",
         backdropFilter: "blur(12px)",
-        borderBottom: `1px solid ${scrolled ? "#1e1e1e" : "#161616"}`,
-        transition: "background .3s, border-color .3s",
+        borderBottom: `1px solid ${scrolled ? "#e8e4df" : "#f0ece7"}`,
+        transition: "background .3s, border-color .3s, box-shadow .3s",
+        boxShadow: scrolled ? "0 1px 12px rgba(0,0,0,0.06)" : "none",
       }}
     >
       {/* Top red micro-stripe */}
@@ -170,18 +173,17 @@ const Header = () => {
         }}
       >
         {/* Logo */}
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <span
+        <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <img
+            src={logo}
+            alt="Swiss Fit Club"
             style={{
-              fontFamily: ffC,
-              fontWeight: 900,
-              fontSize: 26,
-              letterSpacing: "0.14em",
-              color: "#f0f0f0",
+              height: 120,
+              width: "auto",
+              objectFit: "contain",
+              display: "block",
             }}
-          >
-            SWISS <span style={{ color: RED }}>FIT</span> CLUB
-          </span>
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -207,10 +209,10 @@ const Header = () => {
           onClick={() => setMobileOpen((o) => !o)}
           style={{
             background: "none",
-            border: `1px solid ${mobileOpen ? RED + "66" : "#2a2a2a"}`,
+            border: `1px solid ${mobileOpen ? RED + "44" : "#d5d0ca"}`,
             borderRadius: 6,
             padding: "7px 9px",
-            color: mobileOpen ? RED : "#666",
+            color: mobileOpen ? RED : "#6b7280",
             cursor: "pointer",
             transition: "all .2s",
             display: "none",
@@ -231,8 +233,8 @@ const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             style={{
-              background: "#0a0a0a",
-              borderBottom: "1px solid #1e1e1e",
+              background: "#ffffff",
+              borderBottom: "1px solid #e8e4df",
               overflow: "hidden",
             }}
           >
@@ -264,13 +266,13 @@ const Header = () => {
                         gap: 12,
                         padding: "11px 14px",
                         borderRadius: 6,
-                        background: active ? RED + "12" : "transparent",
+                        background: active ? RED + "08" : "transparent",
                         borderLeft: `2px solid ${active ? RED : "transparent"}`,
                         fontFamily: ffC,
                         fontWeight: 700,
                         fontSize: 15,
                         letterSpacing: "0.08em",
-                        color: active ? RED : "#666",
+                        color: active ? RED : "#6b7280",
                         textDecoration: "none",
                         transition: "all .15s",
                       }}
